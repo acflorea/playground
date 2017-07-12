@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-N = 3000
+N = 300
 multiplier = 1
 
 # n
@@ -26,4 +26,5 @@ ax.imshow(p
           # , extent=[1, multiplier * N + 1, 1, N + 1]
           )
 
+fig.savefig("heatmap_prob.pdf")
 plt.show()
