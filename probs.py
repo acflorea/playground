@@ -35,4 +35,5 @@ z1pt, = plt.plot(x, zt, 'b--', label="k=1 - P(Find opt regardless of early stopp
 
 plt.legend(handles=[y1p, y1pt, z1p, z1pt])
 
+plt.savefig('foo.pdf')
 plt.show()
