@@ -33,7 +33,10 @@ y1pt, = plt.plot(x, yt, 'r--', label="k=0 - P(Find opt regardless of early stopp
 z1p, = plt.plot(x, z1, 'b', label="k=1 - P(Find opt and stop early)")
 z1pt, = plt.plot(x, zt, 'b--', label="k=1 - P(Find opt regardless of early stopping)")
 
-plt.legend(handles=[y1p, y1pt, z1p, z1pt])
+plt.legend(loc=2, handles=[y1p, y1pt, z1p, z1pt])
 
-plt.savefig('foo.pdf')
+figure = plt.gcf() # get current figure
+figure.set_size_inches(8, 6)
+
+plt.savefig('foo.pdf',dpi=199)
 plt.show()
