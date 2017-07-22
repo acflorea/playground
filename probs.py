@@ -28,10 +28,10 @@ for i in x:
                                           (1 - y1[i - 1]) * (np.float(i) / (N * (ts - 1)) * (
                                               float(ts - 1 - i + np.log(ts - 1) - np.log(i)))))
 
-y1p, = plt.plot(x, y1, 'r', label="k=0 - Find opt and stop early")
-y1pt, = plt.plot(x, yt, 'r--', label="k=0 - Find opt regardless of early stopping")
-z1p, = plt.plot(x, z1, 'b', label="k=1 - Find opt and stop early")
-z1pt, = plt.plot(x, zt, 'b--', label="k=1 - Find opt regardless of early stopping")
+y1p, = plt.plot(x, y1, 'r', label="k=0 - P(Find opt and stop early)")
+y1pt, = plt.plot(x, yt, 'r--', label="k=0 - P(Find opt regardless of early stopping)")
+z1p, = plt.plot(x, z1, 'b', label="k=1 - P(Find opt and stop early)")
+z1pt, = plt.plot(x, zt, 'b--', label="k=1 - P(Find opt regardless of early stopping)")
 
 plt.legend(handles=[y1p, y1pt, z1p, z1pt])
 
