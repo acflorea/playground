@@ -33,13 +33,15 @@ y1pt, = plt.plot(x, yt, 'r-.', label="k=0 - P(Find opt regardless of early stopp
 z1p, = plt.plot(x, z1, 'b', label="k=1 - P(Find opt and stop early)")
 z1pt, = plt.plot(x, zt, 'b--', label="k=1 - P(Find opt regardless of early stopping)")
 
-plt.legend(loc=3, handles=[y1p, y1pt, z1p, z1pt], prop={'size': 16})
+plt.legend(loc=3, handles=[y1p, y1pt, z1p, z1pt], prop={'size': 13})
 
 figure = plt.gcf()  # get current figure
 figure.set_size_inches(8, 6)
 
-plt.ylim(-0.6, 1.1)
+plt.ylim(-0.31, 1.1)
 plt.yticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
+
+plt.subplots_adjust(left=0.05, right=0.995, top=0.995, bottom=0.05)
 
 plt.savefig('target_stop.pdf')
 # plt.show()

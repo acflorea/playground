@@ -19,12 +19,14 @@ for n in x:
 fig, ax = plt.subplots(figsize=(6, 6))
 # 1st axis is X, 2nd is Y
 ax.imshow(p
-          , cmap='hot'
+          , cmap='binary'
           , interpolation='none'
           , origin='lower'
           , aspect="auto"
           # , extent=[1, multiplier * N + 1, 1, N + 1]
           )
 
-fig.savefig("heatmap_prob.pdf")
+plt.subplots_adjust(left=0.08, right=0.95, top=0.97, bottom=0.05)
+
+plt.savefig("heatmap_prob.pdf")
 plt.show()
